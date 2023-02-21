@@ -6,7 +6,7 @@ async function getBlog() {
 }
 
 async function getComments() {
-	await wait(5000);
+	await wait(4000);
 	return ['Very cool', 'Super', 'Fantastic'];
 }
 
@@ -16,7 +16,12 @@ async function getRecommended() {
 }
 
 async function getFail() {
-	await wait(8000);
+	await wait(6000);
+	return ['Another ppp', 'Suh interesting'];
+}
+
+async function getFailTwo() {
+	await wait(9000);
 	return ['Another ppp', 'Suh interesting'];
 }
 
@@ -25,6 +30,7 @@ export async function load() {
 	const comments = getComments();
 	const fail = getFail();
 	const blog = getBlog();
+	const failTwo = getFailTwo();
 	return {
 		recommended: {
 			recommended
@@ -39,6 +45,11 @@ export async function load() {
 
 			fail
 		
-		}
+		},
+		failTwo: {
+
+			failTwo
+		
+		},
 	};
 }
