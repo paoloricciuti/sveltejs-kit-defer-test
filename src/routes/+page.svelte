@@ -26,7 +26,7 @@
     Loading recommended...
     {:then recommended}
         <ul>
-        {#each recommended as reccomended}
+        {#each recommended as recommended}
             <li>{reccomended}</li>
         {/each}
         </ul>
