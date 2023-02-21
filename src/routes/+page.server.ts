@@ -35,9 +35,9 @@ export async function load() {
 			comments
 		
 		},
-		fails: {
+		fail: {
 
-			fails
+			fail
 		
 		}
 	};
