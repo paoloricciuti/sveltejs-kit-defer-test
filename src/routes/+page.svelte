@@ -10,7 +10,7 @@
     <h2>Comments</h2>
 
 
-    {#await omments}
+    {#await comments}
     Loading comments...
     {:then comments}
         <ul>
