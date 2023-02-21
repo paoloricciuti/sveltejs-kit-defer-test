@@ -19,8 +19,8 @@ export function load() {
 	return {
 		blog: getBlog(),
 		defer: {
-			comments: getComments(),
             recommended: getRecommended(),
+			comments: getComments(),
 		}
 	};
 }
