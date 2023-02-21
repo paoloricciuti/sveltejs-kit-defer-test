@@ -1,5 +1,6 @@
 <script lang="ts">
     export let data;
+    $: ({comments, recommended, fail} = data)
 </script>
 
 <main>
@@ -8,8 +9,8 @@
     <hr />
     <h2>Comments</h2>
 
-    {#key data}
-    {#await data.defer.comments}
+
+    {#await omments}
     Loading comments...
     {:then comments}
         <ul>
@@ -21,7 +22,7 @@
     <hr />
     <h2>Recommended posts</h2>
 
-    {#await data.defer.recommended}
+    {#await recommended}
     Loading recommended...
     {:then recommended}
         <ul>
@@ -33,14 +34,14 @@
     <hr />
     <h2>A failing promise</h2>
 
-    {#await data.defer.fail}
+    {#await fail}
     Loading that will fail...
     {:then fail}
         It did not fail?
     {:catch error}
         {error.message}
     {/await}
-    {/key}
+
 
 </main>
 
