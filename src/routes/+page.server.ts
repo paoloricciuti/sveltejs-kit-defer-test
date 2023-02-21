@@ -2,7 +2,6 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getBlog() {
 	await wait(2000);
-	console.log(
 	return 'A cool blog post';
 }
 
