@@ -20,9 +20,16 @@ async function getFail() {
 	throw new Error('Dang!');
 }
 
+function logAndReturn(name: string) {
+	return (res) => {
+		console.log('Got ', name);
+		return res;
+	};
+}
+
 export async function load() {
-	const recommended = getRecommended();
-	const comments = getComments();
+	const recommended = getRecommended().then(logAndReturn('recommended'));
+	const comments = getComments().then(logAndReturn('comments'));
 	const fail = getFail();
 	const blog = await getBlog();
 	return {
