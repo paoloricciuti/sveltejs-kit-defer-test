@@ -11,7 +11,7 @@
     
 
 
-    {#await data.defer.comments}
+    {#await data.comments.comments}
     Loading comments...
     {:then comments}
         <ul>
@@ -26,7 +26,7 @@
 
     
 
-    {#await data.defer.recommended}
+    {#await data.recommended.recommended}
     Loading recommended...
     {:then recommended}
         <ul>
@@ -41,7 +41,7 @@
 
     
   
-    {#await data.defer.fail}
+    {#await data.fail.fail}
     Loading that will fail...
     {:then fail}
         It did not fail?
