@@ -10,11 +10,17 @@ async function getComments() {
 	return ['Very cool', 'Super', 'Fantastic'];
 }
 
+async function getRecommended() {
+	await wait(3000);
+	return ['Another post', 'Suh interesting'];
+}
+
 export function load() {
 	return {
 		blog: getBlog(),
 		defer: {
-			comments: getComments()
+			comments: getComments(),
+            recommended: getRecommended(),
 		}
 	};
 }
