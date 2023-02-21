@@ -15,12 +15,21 @@ async function getRecommended() {
 	return ['Another post', 'Suh interesting'];
 }
 
-export function load() {
+async function getFail() {
+	await wait(11000);
+    throw new Error("Dang!")
+}
+
+export async function load() {
+    const recommended = getRecommended();
+    const comments = getComments();
+    const fail = getFail();
+    const blog = await getBlog();
 	return {
-		blog: getBlog(),
+		blog,
 		defer: {
-            recommended: getRecommended(),
-			comments: getComments(),
+            recommended,
+			comments,
 		}
 	};
 }

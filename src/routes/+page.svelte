@@ -29,6 +29,16 @@
         {/each}
         </ul>
     {/await}
+    <hr />
+    <h2>A failing promise</h2>
+
+    {#await data.defer.fail}
+    Loading that will fail...
+    {:then fail}
+        It did not fail?
+    {:catch error}
+        {error}
+    {/await}
 
 </main>
 
