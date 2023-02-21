@@ -16,7 +16,7 @@ async function getRecommended() {
 }
 
 async function getFail() {
-	await wait(11000);
+	await wait(15000);
 	throw new Error('Dang!');
 }
 

@@ -37,7 +37,7 @@
     {:then fail}
         It did not fail?
     {:catch error}
-        {error}
+        {error.message}
     {/await}
 
 </main>
