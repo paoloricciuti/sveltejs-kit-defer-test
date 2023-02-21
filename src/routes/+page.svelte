@@ -11,7 +11,7 @@
     <h2>Comments</h2>
 
 
-    {#key defer}
+    {#key data}
     {#await comments}
     Loading comments...
     {:then comments}
