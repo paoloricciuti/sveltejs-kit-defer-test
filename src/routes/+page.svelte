@@ -2,6 +2,7 @@
     export let data;
 </script>
 
+{#key data}
 <main>
     <h1>Blog post</h1>
     {data.blog}
@@ -41,7 +42,7 @@
     {/await}
 
 </main>
-
+{/key}
 <style>
 main{
     max-width: 80%;
