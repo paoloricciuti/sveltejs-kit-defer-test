@@ -9,7 +9,7 @@
     <h2>Comments</h2>
 
     
-    {#key data}
+
 
     {#await data.defer.comments}
     Loading comments...
@@ -50,7 +50,7 @@
     {/await}
 
     
-    {/key}
+
     
  
 
