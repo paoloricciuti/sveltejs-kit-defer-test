@@ -1,7 +1,5 @@
 <script lang="ts">
     export let data;
-    $: ({defer} = data)
-    $: ({comments, recommended, fail} = defer)
 </script>
 
 <main>
@@ -10,9 +8,8 @@
     <hr />
     <h2>Comments</h2>
 
-
     {#key data}
-    {#await comments}
+    {#await data.defer.comments}
     Loading comments...
     {:then comments}
         <ul>
@@ -24,19 +21,19 @@
     <hr />
     <h2>Recommended posts</h2>
 
-    {#await recommended}
+    {#await data.defer.recommended}
     Loading recommended...
     {:then recommended}
         <ul>
-        {#each recommended as recommended_item}
-            <li>{recommended_item}</li>
+        {#each recommended as reccomended}
+            <li>{reccomended}</li>
         {/each}
         </ul>
     {/await}
     <hr />
     <h2>A failing promise</h2>
 
-    {#await fail}
+    {#await data.defer.fail}
     Loading that will fail...
     {:then fail}
         It did not fail?
@@ -45,7 +42,6 @@
     {/await}
     
     {/key}
-
 
 </main>
 
