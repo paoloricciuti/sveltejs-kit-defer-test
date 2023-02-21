@@ -30,7 +30,7 @@ export async function load() {
 	const comments = getComments();
 	const fail = getFail();
 	const blog = getBlog();
-	const failTwo = getFailTwo();
+	const failTwo = getFail();
 	return {
 		recommended: {
 			recommended
