@@ -8,7 +8,7 @@
     <hr />
     <h2>Comments</h2>
 
-    {#key data}
+    {#key data.defer}
     {#await data.defer.comments}
     Loading comments...
     {:then comments}
