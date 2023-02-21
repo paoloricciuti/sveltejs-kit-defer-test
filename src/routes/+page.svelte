@@ -11,6 +11,7 @@
     <h2>Comments</h2>
 
 
+    {#key defer}
     {#await comments}
     Loading comments...
     {:then comments}
@@ -42,6 +43,8 @@
     {:catch error}
         {error.message}
     {/await}
+    
+    {/key}
 
 
 </main>
