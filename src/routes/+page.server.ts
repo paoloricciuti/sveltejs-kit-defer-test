@@ -26,7 +26,6 @@ export async function load() {
 	const fail = getFail();
 	const blog = getBlog();
 	return {
-		blog,
 		defer: {
 			recommended,
 			comments,
