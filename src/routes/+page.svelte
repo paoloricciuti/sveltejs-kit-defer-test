@@ -1,6 +1,6 @@
 <script lang="ts">
     export let data;
-    $: ({defer} = data})
+    $: ({defer} = data)
     $: ({comments, recommended, fail} = defer)
 </script>
 
