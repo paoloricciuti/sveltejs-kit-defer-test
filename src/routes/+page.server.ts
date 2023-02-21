@@ -18,7 +18,7 @@ async function getRecommended() {
 
 async function getFail() {
 	await wait(8000);
-	return ["hey"]
+	return ['Another ppp', 'Suh interesting'];
 }
 
 export async function load() {
