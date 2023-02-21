@@ -26,10 +26,19 @@ export async function load() {
 	const fail = getFail();
 	const blog = getBlog();
 	return {
-		defer: {
-			recommended,
-			comments,
-			fail
+		recommended: {
+			recommended
+			
+		},
+		comments: {
+
+			comments
+		
+		},
+		fails: {
+
+			fails
+		
 		}
 	};
 }
