@@ -2,6 +2,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getBlog() {
 	await wait(2000);
+	console.log(
 	return 'A cool blog post';
 }
 
@@ -17,7 +18,7 @@ async function getRecommended() {
 
 async function getFail() {
 	await wait(8000);
-	throw new Error('Dang!');
+	return ["hey"]
 }
 
 export async function load() {
