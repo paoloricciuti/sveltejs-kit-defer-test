@@ -8,6 +8,7 @@
     <hr />
     <h2>Comments</h2>
 
+    {#key data}
     {#await data.defer.comments}
     Loading comments...
     {:then comments}
@@ -39,6 +40,7 @@
     {:catch error}
         {error.message}
     {/await}
+    {/key}
 
 </main>
 
