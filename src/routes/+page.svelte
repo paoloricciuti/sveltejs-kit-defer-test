@@ -8,7 +8,7 @@
     <hr />
     <h2>Comments</h2>
 
-    {#key data.defer.comments}
+
     {#await data.defer.comments}
     Loading comments...
     {:then comments}
@@ -18,12 +18,12 @@
         {/each}
         </ul>
     {/await}
-       {/key}
+  
     <hr />
     <h2>Recommended posts</h2>
 
     
-       {#key data.defer.recommended}
+
     {#await data.defer.recommended}
     Loading recommended...
     {:then recommended}
@@ -33,12 +33,12 @@
         {/each}
         </ul>
     {/await}
-    {/key}
+
     <hr />
     <h2>A failing promise</h2>
 
     
-       {#key data.defer.fail}
+  
     {#await data.defer.fail}
     Loading that will fail...
     {:then fail}
@@ -46,7 +46,7 @@
     {:catch error}
         {error.message}
     {/await}
-    {/key}
+
     
  
 
