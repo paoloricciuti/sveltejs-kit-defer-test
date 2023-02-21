@@ -11,7 +11,7 @@ async function getComments() {
 }
 
 async function getRecommended() {
-	await wait(3000);
+	await wait(1000);
 	return ['Another post', 'Suh interesting'];
 }
 
