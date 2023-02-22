@@ -25,7 +25,10 @@ async function getFailTwo() {
 	return ['Another ppp', 'Suh interesting'];
 }
 
-export async function load() {
+export async function load({setHeaders}) {
+	setHeaders({
+		"content-type": "text/html; charset=utf-8"
+	});
 	const recommended = getRecommended();
 	const comments = getComments();
 	const fail = getFail();
