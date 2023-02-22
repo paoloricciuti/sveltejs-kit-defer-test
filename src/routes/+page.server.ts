@@ -27,7 +27,7 @@ async function getFailTwo() {
 
 export async function load({setHeaders}) {
 	setHeaders({
-		"content-type": "text/html; charset=utf-8"
+		"content-encoding": "gzip"
 	});
 	const recommended = getRecommended();
 	const comments = getComments();
