@@ -20,11 +20,12 @@ async function getFail() {
 	throw new Error('Dang!');
 }
 
-export async function load() {
+export async function load({ setHeaders }) {
 	const recommended = getRecommended();
 	const comments = getComments();
 	const fail = getFail();
 	const blog = await getBlog();
+	setHeaders('Accept-Encoding', 'gzip');
 	return {
 		blog,
 		recommended: {
