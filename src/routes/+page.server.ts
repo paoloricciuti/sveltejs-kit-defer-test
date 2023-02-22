@@ -27,10 +27,14 @@ export async function load() {
 	const blog = await getBlog();
 	return {
 		blog,
-		defer: {
-			recommended,
-			comments,
-			fail
+		recommended: {
+			lazy: recommended
+		},
+		comments: {
+			lazy: comments
+		},
+		fail: {
+			lazy: fail
 		}
 	};
 }
