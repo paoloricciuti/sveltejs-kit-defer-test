@@ -26,9 +26,7 @@ async function getFailTwo() {
 }
 
 export async function load({setHeaders}) {
-	setHeaders({
-		"content-encoding": "gzip"
-	});
+	
 	const recommended = getRecommended();
 	const comments = getComments();
 	const fail = getFail();
