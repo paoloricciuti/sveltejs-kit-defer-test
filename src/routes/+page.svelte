@@ -8,7 +8,7 @@
     <hr />
     <h2>Comments</h2>
 
-    {#await data.defer.comments}
+    {#await data.comments.lazy}
     Loading comments...
     {:then comments}
         <ul>
@@ -20,7 +20,7 @@
     <hr />
     <h2>Recommended posts</h2>
 
-    {#await data.defer.recommended}
+    {#await data.recommended.lazy}
     Loading recommended...
     {:then recommended}
         <ul>
@@ -32,7 +32,7 @@
     <hr />
     <h2>A failing promise</h2>
 
-    {#await data.defer.fail}
+    {#await data.fail.lazy}
     Loading that will fail...
     {:then fail}
         It did not fail?
