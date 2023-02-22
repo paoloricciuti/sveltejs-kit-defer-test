@@ -32,6 +32,7 @@ export async function load() {
 	const blog = getBlog();
 	const failTwo = getFail();
 	return {
+		blog,
 		recommended: {
 			recommended
 			
