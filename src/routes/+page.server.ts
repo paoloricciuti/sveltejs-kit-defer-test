@@ -25,7 +25,7 @@ export async function load({ setHeaders }) {
 	const comments = getComments();
 	const fail = getFail();
 	const blog = await getBlog();
-	setHeaders('Accept-Encoding', 'gzip');
+	setHeaders({ 'content-encoding': 'gzip' });
 	return {
 		blog,
 		recommended: {
